@@ -30,7 +30,7 @@ function FirstPerson:LocalPlayerChat( args )
 end
 
 function FirstPerson:ModuleLoad()
-	Events:FireRegisteredEvent( "HelpAddItem",
+	Events:Fire( "HelpAddItem",
         {
             name = "First-Person View",
             text = 
@@ -40,7 +40,7 @@ function FirstPerson:ModuleLoad()
 end
 
 function FirstPerson:ModuleUnload()
-    Events:FireRegisteredEvent( "HelpRemoveItem",
+    Events:Fire( "HelpRemoveItem",
         {
             name = "First-Person View"
         } )
